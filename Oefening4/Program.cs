@@ -28,10 +28,10 @@ namespace Oefening4
 
             IFly drone2 = new Drone();
             drone2.Fly();
-            drone2.Swim();
+            //drone2.Swim();
 
             ISwim drone3 = new Drone();
-            drone3.Fly();
+            //drone3.Fly();
             drone3.Swim();
 
             Console.ReadLine();

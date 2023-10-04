@@ -17,9 +17,12 @@ namespace Oefening5
         // en voor bij elk object de drive functie uit. Onthoudt dat deze functie niet weet
         // welke class deze objecten hebben.
         
-        static void DriveAll()
+        static void DriveAll(IList<IDrive> vehicles)
         {
-
+            foreach (var vehicle in vehicles)
+            {
+                vehicle.Drive();
+            }
         }
 
         // Stap 4: Maak in main een lijst met IDrive objecten van verschillende classes.
@@ -27,7 +30,12 @@ namespace Oefening5
 
         static void Main(string[] args)
         {
+            List<IDrive> vehicles = new List<IDrive>();
+            vehicles.Add(new Car());
+            vehicles.Add(new Truck());
+            vehicles.Add(new Bycicle());
 
+            DriveAll(vehicles);
 
             Console.ReadLine();
         }
