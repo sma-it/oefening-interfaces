@@ -21,8 +21,8 @@ namespace Oefening3
             shapes.Add(new Rectangle(3, 4));
             shapes.Add(new Circle(5));
 
-            float circumference = 0;
-            float surface = 0;
+            double circumference = 0;
+            double surface = 0;
 
             foreach(var shape in shapes)
             {
@@ -30,8 +30,8 @@ namespace Oefening3
                 surface += shape.Surface();
             }
 
-            Console.WriteLine($"De totale omtrek is {circumference}");
-            Console.WriteLine($"De totale oppervlakte is {surface}");
+            Console.WriteLine($"De totale omtrek is {circumference.ToString("0.##")}");
+            Console.WriteLine($"De totale oppervlakte is {surface.ToString("0.##")}");
 
             Console.ReadLine();
         }
